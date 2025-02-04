@@ -142,7 +142,7 @@ void _decrementCounter(){
               ElevatedButton(onPressed: _incrementCounter, child: Icon(
               Icons.add)),
               ElevatedButton(onPressed: _decrementCounter, child: Icon(
-                Icons.reset_tv
+                Icons.reset_tv 
               ))
               ],
             ),
