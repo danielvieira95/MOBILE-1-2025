@@ -6,6 +6,7 @@ Exemplo 1 - Programaçao orientada a objeto
 
 // Cria classe chamada Casa
 class Casa{
+  //String cor = "Branco"; // inicializa a variavel com o valor padrao branco
   String? cor; // ? faz parte do null safety do dart
   int? qtde_p;
 
@@ -18,7 +19,7 @@ class Casa{
 void main(){
   // instancia o objeto chamado minhaCasa
   Casa  minhaCasa = Casa();
-  minhaCasa.cor="Azul";
+ // minhaCasa.cor="Azul";
   minhaCasa.qtde_p=2;
   minhaCasa.abrirporta();
   print("Cor da casa ${minhaCasa.cor}");
