@@ -49,5 +49,13 @@ class Carro{
   }
 }
 void main(){
-  //
+  // Cria o objeto
+  Carro Tiida = Carro();
+  Tiida.ano = 2022;
+  Tiida.marca = "Nissa Tiida";
+  Tiida.ligar();
+  Tiida.abrirporta(2);
+  print("Exibe infos do carro");
+  print("${Tiida.marca}");
+  print("${Tiida.ano}");
 }
