@@ -17,9 +17,19 @@ class Pessoa{
   }
 }
 
+class Aluno{
+  String? nome ;
+  getNome(){
+    return nome;
+  }
+}
+
 void main(){
   Pessoa cliente = Pessoa();
   cliente._nome = "Daniel";
   print("Nome do cliente: ${cliente._nome}");
   print("Nome do cliente ${cliente.getNome()} ");
+ Aluno Bruno = Aluno();
+  Bruno.nome="Bruno";
+  print("${Bruno.nome}");
 }
