@@ -29,3 +29,26 @@ class Furadeira extends Maquina{
     print("Furadeira  desligada");
   }
 }
+
+
+class Torno extends Maquina{
+  Torno(String nome, int eixos, int rotacao, double consumo):super(nome, eixos,rotacao,consumo);
+
+  void ligar(){
+    print("Torno ${nome_maq} ligado");
+  }
+
+  void desligar(){
+    print("Torno ${nome_maq} desligado");
+  }
+
+  void ajusta_velocidade(int rpm){
+    print("Velocidade Rpm: ${rpm}");
+
+  }
+}
+void main(){
+  Furadeira Bosch = Furadeira("Furadeira Bosch", 3000, 1.2);
+  Bosch.ligar();
+  Bosch.ajusta_velocidade(1500);
+}
