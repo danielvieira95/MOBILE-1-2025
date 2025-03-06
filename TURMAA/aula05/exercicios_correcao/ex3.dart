@@ -51,4 +51,9 @@ void main(){
   Furadeira Bosch = Furadeira("Furadeira Bosch", 3000, 1.2);
   Bosch.ligar();
   Bosch.ajusta_velocidade(1500);
+
+  Torno Rome = Torno("Rome", 3, 5000, 3);
+
+  Rome.ligar();
+  Rome.ajusta_velocidade(2750);
 }
