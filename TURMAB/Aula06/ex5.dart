@@ -84,4 +84,8 @@ class ArCondicionado extends Produtos{
     Fritadeira Philips = Fritadeira("Philips", 1, 800.0, "Wifi", 1.4);
     Philips.ligar();
     Philips.ajustatemp(100);
+    ArCondicionado LG = ArCondicionado("LG", 1, 3500.0, "Bluetooth",3.5);
+    LG.ligar();
+    LG.ajustatemp(0);
+
   }
