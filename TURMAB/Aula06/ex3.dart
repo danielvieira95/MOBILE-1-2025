@@ -31,3 +31,11 @@ class Retangulo implements Forma{
     return altura*largura;
   }
 }
+
+void main(){
+  Forma forma1 = Circulo(5);
+  Forma forma2 = Retangulo(4, 6);
+
+  print("Area do circulo  ${forma1.calcularArea()}");
+  print("Area do retangulo ${forma2.calcularArea()}");
+}
