@@ -16,7 +16,9 @@ class Telaapp extends StatelessWidget {
   Widget build(BuildContext context) {
     // MaterialApp vai permitir construir a tela do app
     return MaterialApp(
+      
       home: Column(
+        
         // espaçamento primario 
         //mainAxisAlignment: MainAxisAlignment.center,
         //mainAxisAlignment: MainAxisAlignment.start,
@@ -26,11 +28,16 @@ class Telaapp extends StatelessWidget {
        mainAxisAlignment: MainAxisAlignment.spaceAround,
 
       children: [
+        
         Stack(
           alignment: Alignment.center,
           children: [
-            Container(width: 200,height: 100,color: Colors.blue,),
-            Container(width: 180,height: 80,color: Colors.red,),
+            Container(width: 300,height: 100,color: Colors.blue,),
+            Container(width: 280,height: 80,color: Colors.red,
+            child: Text("Senai",textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white,
+            decoration: TextDecoration.none),),
+            ),
           ],
         ),
         
