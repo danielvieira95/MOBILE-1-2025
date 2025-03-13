@@ -16,6 +16,8 @@ class Telaapp extends StatelessWidget {
   Widget build(BuildContext context) {
     // MaterialApp vai permitir construir a tela do app
     return MaterialApp(
+      // retira o modo debug do aplicativo
+      debugShowCheckedModeBanner: false,
       
       home: Column(
         
