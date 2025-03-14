@@ -16,6 +16,7 @@ class Telaapp extends StatelessWidget {
   Widget build(BuildContext context) {
     // MaterialApp vai permitir construir a tela do app
     return MaterialApp(
+      
       // retira o modo debug do aplicativo
       debugShowCheckedModeBanner: false,
       
@@ -47,6 +48,9 @@ class Telaapp extends StatelessWidget {
         color: Colors.blue,
         decoration: TextDecoration.none),),
         Container(width: 200,height: 100,color: Colors.red,),
+        ElevatedButton(onPressed: (){
+          print("Botao pressionado");
+        }, child: Text("Mensagem")),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
