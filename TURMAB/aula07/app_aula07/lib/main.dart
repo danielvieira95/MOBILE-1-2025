@@ -15,6 +15,8 @@ class Telapp extends StatelessWidget {
   Widget build(BuildContext context) {
     // MaterialApp faz parte do design do aplicativo
     return MaterialApp(
+      // remove a faixa debug do aplicativo
+      debugShowCheckedModeBanner: false,
       home: Column(
         // alinhamento primario
        // mainAxisAlignment: MainAxisAlignment.center,
@@ -24,13 +26,38 @@ class Telapp extends StatelessWidget {
        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-        Container(width: 300, height: 100,color: Colors.blue,),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+             Container(width: 300, height: 100,color: Colors.blue,),
+             Container(width: 280,height: 80,color: Colors.red,
+             child: Text("Senai",textAlign: TextAlign.center,
+             style: TextStyle(
+              color: Colors.white,
+              decoration: TextDecoration.none),),
+             ),
+            ],
+          ),
+       
         Container(width: 300,height: 100,color: Colors.red,child: 
         Text("Senai - Mobile",style: TextStyle(fontSize: 30,
         color: Colors.white,
         decoration: TextDecoration.none),
         ),),
-
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+          Container(width: 50,height: 50,color: Colors.amber,),
+           Container(width: 50,height: 50,color: Colors.white,),
+            Container(width: 50,height: 50,color: Colors.grey,),
+          ],
+        ),
+        // Widget botao
+        // on pressed evento que ocorre quando o botao é pressionado
+        ElevatedButton(
+          onPressed:(){
+           print("Desenvolvimento Mobile 1");
+        }, child: Text("Mensagem")),
         Stack(
           // propriedade de alinhamento
           alignment: Alignment.center ,
