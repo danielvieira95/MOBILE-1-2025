@@ -17,7 +17,51 @@ class TelaApp extends StatelessWidget {
 
         ),
         // body corpo do Scaffold
-        body: Column(
+        body: Home(),
+            
+            
+            ));
+
+            
+
+              
+            
+                        
+               
+
+
+          
+   
+  }
+}
+
+
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  // Variavel mensagem
+  String msg = "Mobile";
+  //cria função para exibir mensagem no app
+  _exibemsg(){
+    setState(() {
+      msg = "Mobile 1";
+    });
+  }
+
+  _limpar(){
+    setState(() {
+      msg="";
+    });
+    
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Column(
           // Children estabelece a relação de filho  entre a coluna e os outros elementos
           children: [
             Row(
@@ -44,7 +88,7 @@ class TelaApp extends StatelessWidget {
                   width: 100,
                   height: 100,
                   color: Colors.black,
-                  child: Text("Stack",
+                  child: Text("${msg}",
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white),
@@ -52,7 +96,7 @@ class TelaApp extends StatelessWidget {
                 ),],
             ),
             SizedBox(
-              height: 350,
+              height: 250,
               
              child: 
                ListView(
@@ -65,53 +109,25 @@ class TelaApp extends StatelessWidget {
                   title: Text("Usuario 2"),
                   subtitle: Text("Descriçao do usuario 2"),
                   ),
-                  ListTile(leading: Icon(Icons.person),
-                  title: Text("Usuario 3"),
-                  subtitle: Text("Descriçao do usuario 3"),
                   
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Usuario 4"),
-                    subtitle: Text("Descrição do usuario 4"),
-                  ),
-                    
-                  ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Usuario 5"),
-                    subtitle: Text("Descrição do usuario 5"),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Usuario 6"),
-                    subtitle: Text("Descrição do usuario 6"),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Usuario 7"),
-                    subtitle: Text("Descrição do usuario 7"),
-                  ),
                   
                 ],
               )) ,
+            Row(
+              // define o espaçamento entre os botoes
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+               // ElevatedButton(onPressed: _exibemsg, child: Text("Mensagem"),),
+                IconButton(onPressed: _exibemsg, icon: Icon(Icons.mail)),
+               //  ElevatedButton(onPressed: _limpar, child: Text("Limpar")),
+                 TextButton(onPressed: _limpar, child: Text("Limpar")),
+                // FloatingActionButton(onPressed: _exibemsg,child: Icon(Icons.access_alarm),),
+              ],
+            ),
             
             
             
             ],
-            ),
-            
-            
-            ));
-
-            
-
-              
-            
-                        
-               
-
-
-          
-   
+            );
   }
 }
