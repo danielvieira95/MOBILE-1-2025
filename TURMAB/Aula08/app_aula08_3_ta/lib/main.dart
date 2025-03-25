@@ -90,7 +90,16 @@ class _HomeState extends State<Home> {
                
                ],
              ),
-          
+           SizedBox(
+            
+            width: double.infinity,
+            child: ElevatedButton(onPressed: _exibemsg, child: Text("Exibir"),
+            style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.red),
+            foregroundColor: WidgetStateProperty.all(Colors.white)),
+
+            ),
+            
+           )
         ],
       ),
     );
