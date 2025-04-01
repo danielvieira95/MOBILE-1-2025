@@ -117,10 +117,16 @@ class _CampotextoState extends State<Campotexto> {
         ],
       ),
       Container(width: 300,height: 50,
-      color: Colors.blue,child: Text("${email.text}",
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.blue,
+      ),
+      child: Text("${email.text}",
       textAlign:TextAlign.center ,
       
+      
       style: TextStyle(fontSize: 18),),
+      
       ),
       Container(width: 300,height: 50,
       color: Colors.blue,child: Text("${nome.text} - ${idade.text}",
