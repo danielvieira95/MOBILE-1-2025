@@ -39,7 +39,7 @@ class DashboardScreen extends StatelessWidget {
 
     appBar: AppBar(
       // atribuindo cor ao appbar
-    backgroundColor: Colors.brown,
+    backgroundColor: Colors.red,
     elevation: 5,
     iconTheme: IconThemeData(color: Colors.white),
     // centraliza o titulo do aplicativo
@@ -113,7 +113,7 @@ class DashboardScreen extends StatelessWidget {
     bottomNavigationBar: BottomNavigationBar(
       currentIndex: 0,
       selectedItemColor: Colors.white,
-      backgroundColor: Colors.brown[900],
+      backgroundColor: Colors.red[900],
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -158,7 +158,7 @@ class _DashboardButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16)),
       elevation: 5,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 12),
+        padding: EdgeInsets.symmetric(vertical: 50,horizontal: 12),
         child: Row(
           children: [
             Icon(

@@ -120,7 +120,7 @@ class SensorCard extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
           child: Image.asset(sensor.imagePath,
-          height: 120,fit:  BoxFit.cover,),
+          height: 240,fit:  BoxFit.cover,),
         ),
         Padding(padding: EdgeInsets.all(16),
         child: Column(
