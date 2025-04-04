@@ -1,3 +1,5 @@
+import 'package:appaula10_ta/tela2.dart';
+import 'package:appaula10_ta/tela3.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +40,7 @@ class DashboardScreen extends StatelessWidget {
     appBar: AppBar(
       // atribuindo cor ao appbar
     backgroundColor: Colors.brown,
-    elevation: 0,
+    elevation: 5,
     iconTheme: IconThemeData(color: Colors.white),
     // centraliza o titulo do aplicativo
     centerTitle: true,
@@ -84,13 +86,20 @@ class DashboardScreen extends StatelessWidget {
        _DashboardButton(
         icon: Icons.analytics_outlined, 
         label: 'Monitoramento', 
-        onTap: (){}),
+        onTap: (){
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context)=>ColetaDadosScreen()));
+
+        }),
 
         SizedBox(height: 10,),
          _DashboardButton(
         icon: Icons.settings_remote_outlined, 
         label: 'Sistema de controle', 
-        onTap: (){}),
+        onTap: (){
+          Navigator.push(context,
+           MaterialPageRoute(builder: (context)=>Telaacionamento()));
+        }),
 
         SizedBox(height: 10,),
          _DashboardButton(
@@ -147,7 +156,7 @@ class _DashboardButton extends StatelessWidget {
      child: Card(
       shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16)),
-      elevation: 2,
+      elevation: 5,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20,horizontal: 12),
         child: Row(
