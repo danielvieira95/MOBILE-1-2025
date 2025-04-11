@@ -97,13 +97,15 @@ class _ChatScreenState extends State<ChatScreen> {
                   horizontal:8,vertical: 4 ),
                   child: Row(
                     children: [
+                      Expanded(
+                        child: 
                       TextField(
                         controller: _controller,
                         decoration: InputDecoration(
-                          hintText: 'Digite sua messagem',
+                          hintText: 'Digite sua mensagem',
                           border: InputBorder.none
                         ),
-                      ),
+                      ),),
                       IconButton(
                         onPressed: _sendMessage, 
                         icon: Icon(Icons.send,
@@ -142,7 +144,7 @@ class MessageBubble extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 5),
           padding: EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: isMe?Colors.green[10]:Colors.grey[30],
+            color: isMe?Colors.green[100]:Colors.grey[300],
             borderRadius: BorderRadius.circular(12)
           ),
           child: Text(text),

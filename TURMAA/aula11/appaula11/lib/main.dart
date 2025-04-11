@@ -73,7 +73,7 @@ class _NavScreenState extends State<NavScreen> {
       appBar: AppBar(
         title: Text("Aplicativo aula 11"),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
       ),
       body: Center(
         // _widgetOptions é a lista de de telas 
