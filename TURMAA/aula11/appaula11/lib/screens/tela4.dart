@@ -138,6 +138,7 @@ class MessageBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
      alignment: isMe?Alignment.centerRight : Alignment.centerLeft,
+     
     child: Column(
       children: [
         Container(
