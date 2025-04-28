@@ -14,7 +14,7 @@ class TelaApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme:ColorScheme.fromSeed(seedColor: Colors.teal),
+        colorScheme:ColorScheme.fromSeed(seedColor: Colors.red),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor:Colors.red,
