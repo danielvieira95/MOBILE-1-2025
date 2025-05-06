@@ -1,0 +1,129 @@
+{
+  "produtos": [
+    {
+      "id": "0",
+      "nome": "Chocolate",
+      "valor": "5.50",
+      "qtde": "3"
+    },
+    {
+      "id": "1",
+      "nome": "Shampoo",
+      "valor": "20.50",
+      "qtde": "7"
+    },
+    {
+      "id": "2",
+      "nome": "Picanha",
+      "valor": "120",
+      "qtde": "5"
+    },
+    {
+      "id": "af44",
+      "nome": "iphone",
+      "valor": "6000",
+      "qtde": "8"
+    },
+    {
+      "id": "b9cb",
+      "nome": "mouse",
+      "valor": "50",
+      "qtde": "3"
+    },
+    {
+      "id": "Nintendo switch",
+      "nome": "Nintendo switch",
+      "valor": "2500",
+      "qtde": "7"
+    },
+    {
+      "id": "Iphone 15",
+      "nome": "Iphone 15",
+      "valor": "8500",
+      "qtde": "6"
+    },
+    {
+      "id": "Xbox Series x",
+      "nome": "Xbox Series x",
+      "valor": "2800",
+      "qtde": "5"
+    },
+    {
+      "id": "controle",
+      "nome": "controle",
+      "valor": "300",
+      "qtde": "5"
+    },
+    {
+      "id": "Impressora 3d",
+      "nome": "Impressora 3d",
+      "valor": "3800",
+      "qtde": "2"
+    },
+    {
+      "id": "rt",
+      "nome": "rt",
+      "valor": "14",
+      "qtde": "2"
+    },
+    {
+      "id": "Iphone 16",
+      "nome": "Iphone 16",
+      "valor": "6000",
+      "qtde": "5"
+    },
+    {
+      "id": " Smartwatch",
+      "nome": " Smartwatch",
+      "valor": "3500",
+      "qtde": "2"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "dan",
+      "login": "dan",
+      "senha": "2024"
+    },
+    {
+      "id": "filipe",
+      "login": "filipe",
+      "senha": "1408"
+    },
+    {
+      "id": "senaimobile",
+      "login": "senaimobile",
+      "senha": "2024"
+    },
+    {
+      "id": "admin",
+      "login": "admin",
+      "senha": "1234"
+    },
+    {
+      "id": "isa",
+      "login": "isa",
+      "senha": "123"
+    },
+    {
+      "id": "isa",
+      "login": "isa",
+      "senha": "123"
+    },
+    {
+      "id": "senai",
+      "login": "senai",
+      "senha": "2025"
+    },
+    {
+      "id": "senai",
+      "login": "senai",
+      "senha": "123"
+    },
+    {
+      "id": "Pedro",
+      "login": "Pedro",
+      "senha": "2005"
+    }
+  ]
+}
