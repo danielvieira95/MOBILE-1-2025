@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:app_aula14/screens/prod_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -44,53 +45,65 @@ class _CadastroprodutoState extends State<Cadastroproduto> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red,
         title: Text("App Mercado"),
       ),
       body: Column(
         children: [
-          TextField(
-            keyboardType: TextInputType.name,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-              
-
-            ),
-            hintText: "Digite o nome do produto"
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              keyboardType: TextInputType.name,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                
             
-             ),
-             controller: nomeprod,
+              ),
+              hintText: "Digite o nome do produto"
+              
+               ),
+               controller: nomeprod,
+            ),
           ),
 
-          TextField(
-            keyboardType: TextInputType.name,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-              
-
-            ),
-            hintText: "Digite o valor do produto"
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              keyboardType: TextInputType.name,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                
             
-             ),
-             controller: valorprod,
-          ),
-          TextField(
-            keyboardType: TextInputType.name,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
+              ),
+              hintText: "Digite o valor do produto"
               
-
+               ),
+               controller: valorprod,
             ),
-            hintText: "Digite a quantidade do produto"
-            
-             ),
-             controller: qtde,
           ),
-          ElevatedButton(onPressed: _cadastrarproduto, child: Text("Cadastrar")),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              keyboardType: TextInputType.name,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                
+            
+              ),
+              hintText: "Digite a quantidade do produto"
+              
+               ),
+               controller: qtde,
+            ),
+          ),
+          ElevatedButton(onPressed: _cadastrarproduto, child: Text("Cadastrar"),),
+         
           ElevatedButton(onPressed: _deleteprod, child: Text("Deletar")),
           ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Produto_screen()));
 
           }, child: Text("Prod Screen"))
 

@@ -77,6 +77,18 @@
       "nome": " Smartwatch",
       "valor": "3500",
       "qtde": "2"
+    },
+    {
+      "id": "fone jbl",
+      "nome": "fone jbl",
+      "valor": "800",
+      "qtde": "2"
+    },
+    {
+      "id": "MacBook pro",
+      "nome": "MacBook pro",
+      "valor": "15000",
+      "qtde": "5"
     }
   ],
   "usuarios": [
@@ -124,6 +136,11 @@
       "id": "Pedro",
       "login": "Pedro",
       "senha": "2005"
+    },
+    {
+      "id": "dan29",
+      "login": "dan29",
+      "senha": "3030"
     }
   ]
 }
