@@ -109,7 +109,7 @@ class _CadastroprodutoState extends State<Cadastroproduto> {
            Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              keyboardType: TextInputType.name,
+              keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8)
