@@ -1,0 +1,138 @@
+{
+  "produtos": [
+    {
+      "id": "0",
+      "nome": "Chocolate",
+      "valor": "5.50",
+      "qtde": "3"
+    },
+    {
+      "id": "1",
+      "nome": "Shampoo",
+      "valor": "20.50",
+      "qtde": "7"
+    },
+    {
+      "id": "2",
+      "nome": "Picanha",
+      "valor": "120",
+      "qtde": "5"
+    },
+    {
+      "id": "0e5e",
+      "nome": "Chocotrio",
+      "valor": "8.00",
+      "qtde": "3"
+    },
+    {
+      "id": "04a0",
+      "nome": "Danete",
+      "valor": "10.90",
+      "qtde": "12"
+    },
+    {
+      "id": "PS5",
+      "nome": "PS5",
+      "valor": "3500",
+      "qtde": "5"
+    },
+    {
+      "id": "Nintendo switch",
+      "nome": "Nintendo switch",
+      "valor": "2500",
+      "qtde": "7"
+    },
+    {
+      "id": "Iphone 15",
+      "nome": "Iphone 15",
+      "valor": "8500",
+      "qtde": "6"
+    },
+    {
+      "id": "Xbox Series x",
+      "nome": "Xbox Series x",
+      "valor": "2800",
+      "qtde": "5"
+    },
+    {
+      "id": "Impressora 3d",
+      "nome": "Impressora 3d",
+      "valor": "3800",
+      "qtde": "2"
+    },
+    {
+      "id": "iPhone 17",
+      "nome": "iPhone 17",
+      "valor": "8000",
+      "qtde": "5"
+    },
+    {
+      "id": "PS5 Pro",
+      "nome": "PS5 Pro",
+      "valor": "6500",
+      "qtde": "4"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "dan",
+      "login": "dan",
+      "senha": "2024"
+    },
+    {
+      "id": "filipe",
+      "login": "filipe",
+      "senha": "1408"
+    },
+    {
+      "id": "senaimobile",
+      "login": "senaimobile",
+      "senha": "2024"
+    },
+    {
+      "id": "admin",
+      "login": "admin",
+      "senha": "1234"
+    },
+    {
+      "id": "isa",
+      "login": "isa",
+      "senha": "123"
+    },
+    {
+      "id": "isa",
+      "login": "isa",
+      "senha": "123"
+    },
+    {
+      "id": "senai25",
+      "login": "senai25",
+      "senha": "2025"
+    },
+    {
+      "id": "rocky",
+      "login": "rocky",
+      "senha": "222"
+    },
+    {
+      "id": "camila25",
+      "login": "camila25",
+      "senha": "2025"
+    },
+    {
+      "id": "alana",
+      "login": "alana",
+      "senha": "1234"
+    },
+    {
+      "id": "alana",
+      "login": "alana",
+      "senha": "1234"
+    },
+    {
+      "id": "",
+      "login": "",
+      "senha": ""
+    }
+  ]
+}
