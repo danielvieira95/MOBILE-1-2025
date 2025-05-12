@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Telaacionamento extends StatefulWidget {
   const Telaacionamento({super.key});
@@ -10,18 +12,77 @@ class Telaacionamento extends StatefulWidget {
 class _TelaacionamentoState extends State<Telaacionamento> {
   final bool status = false;
   Color status_cor = Colors.red;
-
-  _ligarbomba() {
+   int? temperatura;
+  int? umidade;
+  int? bomba;
+  int? sensorUmidSolo;
+ int? pH;
+  
+  Future<void> _leitura()async{
+    final response = await http.get(Uri.parse('http://10.0.2.2:8000/dados'));
+    print(response.body);
+    final dados = json.decode(response.body);
     setState(() {
-      status_cor = Colors.green;
+      temperatura=(dados["temperatura"]);
+      umidade = (dados["umidade"]);
+      sensorUmidSolo = (dados["sensor_umidsolo"]);
+      pH = (dados["pH"]);
+      bomba= dados["bomba"];
+      print(temperatura);
+      print(umidade);
+      print(sensorUmidSolo);
+      print(pH);
+      print(bomba);
     });
+   
   }
 
-  _desligarbomba() {
-    setState(() {
-      status_cor = Colors.red;
-    });
+  
+  
+
+Future<void> _ligarBomba() async {
+    try {
+      final response = await http.post(
+        Uri.parse('http://10.0.2.2:8000/bomba'),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'estado': 1}),
+      );
+
+      if (response.statusCode == 200) {
+        setState(() {
+          status_cor = Colors.green;
+        });
+        print("Bomba ligada com sucesso!");
+      } else {
+        print("Erro ao ligar a bomba: ${response.statusCode}");
+      }
+    } catch (e) {
+      print("Erro na requisição: $e");
+    }
   }
+
+
+  Future<void> _desligarBomba() async {
+    try {
+      final response = await http.post(
+        Uri.parse('http://10.0.2.2:8000/bomba'),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'estado': 0}),
+      );
+
+      if (response.statusCode == 200) {
+        setState(() {
+          status_cor = Colors.red;
+        });
+        print("Bomba desligada com sucesso!");
+      } else {
+        print("Erro ao ligar a bomba: ${response.statusCode}");
+      }
+    } catch (e) {
+      print("Erro na requisição: $e");
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +131,7 @@ class _TelaacionamentoState extends State<Telaacionamento> {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.brown,
                       foregroundColor: Colors.white),
-                  onPressed: _ligarbomba,
+                  onPressed: _ligarBomba,
                   child: Text('Ligar bomba'),
                 ),
               ),
@@ -80,8 +141,18 @@ class _TelaacionamentoState extends State<Telaacionamento> {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.brown,
                       foregroundColor: Colors.white),
-                  onPressed: _desligarbomba,
+                  onPressed: _desligarBomba,
                   child: Text('Desligar bomba'),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.brown,
+                      foregroundColor: Colors.white),
+                  onPressed: _leitura,
+                  child: Text('Leitura'),
                 ),
               ),
             ],

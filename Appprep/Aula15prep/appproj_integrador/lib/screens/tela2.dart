@@ -30,6 +30,7 @@ class ColetaDadosScreen extends StatefulWidget {
 }
 
 class _ColetaDadosScreenState extends State<ColetaDadosScreen> {
+  
   // Cria lista com os sensores
   final List<SensorData> sensores = [
     // primeiro sensor
@@ -175,17 +176,28 @@ class SensorCard extends StatelessWidget {
 
 
 // Tela de Detalhes do Sensor
-class DetalheSensorScreen extends StatelessWidget {
+class DetalheSensorScreen extends StatefulWidget {
   final SensorData sensor;
-
+  
   const DetalheSensorScreen({super.key, required this.sensor});
+
+  @override
+  State<DetalheSensorScreen> createState() => _DetalheSensorScreenState();
+}
+
+class _DetalheSensorScreenState extends State<DetalheSensorScreen> {
+ Future<void> _leitura() async {
+    final response = await http.get(Uri.parse('http://10.0.2.2:8000/dados'));
+    print(response.body);
+    
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFEAF5EE),
       appBar: AppBar(
-        title: Text(sensor.title),
+        title: Text(widget.sensor.title),
         backgroundColor: Colors.brown,
       ),
       body: Padding(
@@ -196,7 +208,7 @@ class DetalheSensorScreen extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
-                sensor.imagePath,
+                widget.sensor.imagePath,
                 height: 240,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -204,15 +216,15 @@ class DetalheSensorScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              "Valor: ${sensor.value}",
+              "Valor: ${widget.sensor.value}",
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             Text(
-              "Status: ${sensor.status}",
+              "Status: ${widget.sensor.status}",
               style: TextStyle(
                 fontSize: 16,
-                color: sensor.statusColor,
+                color: widget.sensor.statusColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
