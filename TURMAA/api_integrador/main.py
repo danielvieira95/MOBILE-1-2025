@@ -29,8 +29,8 @@ def obter_dados():
     # Gera valores com incrementos especificos
     temperatura = random.randrange(20,35+temp_increment,temp_increment)
     umidade = random.randrange(40,80+umid_increment,umid_increment)
-    sensor_umidsolo = random.randrage(0,100+solo_increment,solo_increment)
-    pH = random.randrage(0,14+ph_increment,ph_increment)
+    sensor_umidsolo = random.randrange(0,100+solo_increment,solo_increment)
+    pH = random.randrange(0,14+ph_increment,ph_increment)
     return{
         "temperatura":temperatura,
         "umidade":umidade,
