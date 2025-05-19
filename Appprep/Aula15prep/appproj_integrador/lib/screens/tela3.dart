@@ -43,7 +43,7 @@ class _TelaacionamentoState extends State<Telaacionamento> {
 Future<void> _ligarBomba() async {
     try {
       final response = await http.post(
-        Uri.parse('http://10.109.83.10:8000/bomba'),
+        Uri.parse('https://apiprojetointegrador-production.up.railway.app/bomba'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'estado': 1}),
       );
@@ -65,7 +65,7 @@ Future<void> _ligarBomba() async {
   Future<void> _desligarBomba() async {
     try {
       final response = await http.post(
-        Uri.parse('http://10.109.83.10:8000/bomba'),
+        Uri.parse('https://apiprojetointegrador-production.up.railway.app/bomba'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'estado': 0}),
       );
