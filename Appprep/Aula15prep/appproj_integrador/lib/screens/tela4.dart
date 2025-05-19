@@ -33,7 +33,8 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void _sendMessage() async {
     final userMessage = _controller.text.trim();
-    String url = "https://profdanielvieira95-api-agro-langflow.hf.space/api/v1/run/fc256de9-9258-4008-a146-7211595ccf6f";
+    String url = "https://profdanielvieira95-api-agro-langflow.hf.space/api/v1/run/fa47011f-110e-4e0a-b70d-e7c4c1ff6bf6";
+    //https://profdanielvieira95-api-agro-langflow.hf.space/api/v1/run/fa47011f-110e-4e0a-b70d-e7c4c1ff6bf6
     if (_controller.text.trim().isEmpty) return;
     setState(() {
       _messages.add({
