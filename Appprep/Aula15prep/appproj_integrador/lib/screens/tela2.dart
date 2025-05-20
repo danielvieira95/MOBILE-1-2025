@@ -31,6 +31,7 @@ class ColetaDadosScreen extends StatefulWidget {
 
 class _ColetaDadosScreenState extends State<ColetaDadosScreen> {
   
+
   // Cria lista com os sensores
   final List<SensorData> sensores = [
     // primeiro sensor

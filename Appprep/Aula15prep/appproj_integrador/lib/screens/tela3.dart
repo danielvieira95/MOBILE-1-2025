@@ -10,6 +10,10 @@ class Telaacionamento extends StatefulWidget {
 }
 
 class _TelaacionamentoState extends State<Telaacionamento> {
+  void initState(){
+    super.initState();
+    _leitura();
+  }
   final bool status = false;
   Color status_cor = Colors.red;
    int? temperatura;
